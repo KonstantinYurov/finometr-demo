@@ -1,0 +1,716 @@
+@charset "UTF-8";
+
+/*-----------------------------Переменные START-----------------------------*/
+
+/*-----------------------------Переменные END-----------------------------*/
+
+.broker-single {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.broker-head__wrapper {
+    margin: 0 0 15px;
+}
+
+.broker-head__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.broker-image__wrapper {
+    margin: 0 15px 0 0;
+}
+
+.broker-image__container {
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+.broker-image__container img {
+    width: 100%;
+    height: 100%;
+}
+
+.broker__title-wrapper .breadcrumbs__container ul {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.broker__title-container h1 {
+    font-size: 46px;
+    font-size: 52px;
+    line-height: 110%;
+}
+
+.tariff__title h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 25px;
+}
+
+.tariff-wrapper {
+    margin: 0 0 100px;
+}
+
+.tariff-item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(auto, 1.8fr) minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 1.8fr) minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    background: #F5F5F5;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    border-radius: 55px;
+    padding: 30px;
+    margin: 0 0 40px;
+}
+
+.tariff-item__name {
+    text-align: start;
+    font-size: 24px;
+}
+
+.tariff-item__name p:first-child {
+    line-height: 130%;
+    margin: 0 0 3px;
+}
+
+.tariff-item__name p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 140%;
+    color: #9C9C9C;
+    max-width: 500px;
+}
+
+.tariff-item__commission {
+    font-size: 24px;
+}
+
+.tariff-item__commission p:first-child {
+    line-height: 130%;
+    margin: 0 0 3px 0;
+}
+
+.tariff-item__commission p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 140%;
+    color: #9C9C9C;
+    max-width: 400px;
+}
+
+.tariff-item__service {
+    font-size: 24px;
+}
+
+.tariff-item__service p:first-child {
+    line-height: 130%;
+    margin: 0 0 3px 0;
+}
+
+.tariff-item__service p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 140%;
+    color: #9C9C9C;
+    max-width: 300px;
+}
+
+.tariff-item__deposit {
+    font-size: 24px;
+}
+
+.tariff-item__deposit p:first-child {
+    line-height: 130%;
+    margin: 0 0 3px 0;
+}
+
+.tariff-item__deposit p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 140%;
+    color: #9C9C9C;
+    max-width: 300px;
+}
+
+.tariff-item__detalies {
+    -ms-grid-column: 4;
+    grid-column-start: 4;
+    -ms-grid-column-align: end;
+    justify-self: end;
+}
+
+.tariff-item__detalies-text {
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: #9C9C9C;
+    border: solid 1px #9C9C9C;
+    border-radius: 55px;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+.tariff-item__detalies-text:hover {
+    color: #4A4AF3;
+    border: solid 1px #4A4AF3;
+}
+
+.tariff-item-pop-up {
+    display: none;
+}
+
+.tariff-item-pop-up--active {
+    display: block;
+}
+
+.tariff-item-pop-up__wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: rgba(41, 41, 41, 0.7);
+}
+
+.tariff-item-pop-up__close {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+    background: white;
+    padding: 20px 0 0;
+}
+
+.tariff-item-pop-up__close .icon-close {
+    margin-left: 90%;
+    cursor: pointer;
+}
+
+.tariff-item-pop-up__close .icon-close:after {
+    color: black;
+    font-size: 30px;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+}
+
+.tariff-item-pop-up__container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: white;
+    border-radius: 55px;
+    max-width: 600px;
+    height: 90%;
+    z-index: 1;
+    margin: 30px 0 0 0;
+}
+
+.tariff-item-pop-up__container::-webkit-scrollbar {
+    width: 5px;
+    height: 100px;
+}
+
+.tariff-item-pop-up__container::-webkit-scrollbar-thumb {
+    background-color: #7D7D7D;
+    border-radius: 100px;
+}
+
+.tariff-item-pop-up__container::-webkit-scrollbar-track {
+    margin: 45px 0 45px 0;
+}
+
+.tariff-item-pop-up__text {
+    margin: 0px 70px 50px;
+}
+
+.tariff-item-pop-up__text p {
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+
+.tariff-item-pop-up__text b,
+.tariff-item-pop-up__text strong {
+    font-family: Raleway-Bold;
+    font-size: 16px;
+    line-height: 130%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.tariff-item-pop-up__text li {
+    font-size: 16px;
+    list-style: disc;
+    margin: 0 0 20px;
+    line-height: 130%;
+}
+
+.tariff-item-pop-up__text li::marker {
+    color: #4A4AF3;
+}
+
+.broker-issuer__wrapper {
+    max-width: 1200px;
+    margin: 0 0 95px;
+}
+
+.broker-issuer-container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.broker-issuer-container p {
+    margin: 0 0 20px;
+}
+
+.broker-block {
+    scroll-margin: 170px;
+}
+
+.broker-option__wrapper {
+    margin: 0 0 70px;
+}
+
+.broker-option__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+}
+
+.broker-option__container li.list-done {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 0 20px;
+}
+
+.broker-option__container li.list-done::before {
+    content: "+ ";
+    position: absolute;
+    left: -2px;
+    top: 2px;
+    font-size: 25px;
+    color: #4A4AF3;
+}
+
+.broker-option__container li.list-close {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 0 20px;
+}
+
+.broker-option__container li.list-close::before {
+    content: "‒ ";
+    position: absolute;
+    left: -2px;
+    top: 0px;
+    font-size: 25px;
+    color: #d7d7d7;
+}
+
+.broker-tools__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.broker-products__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.broker-terminal__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.broker-specificity__wrapper {
+    margin: 0 0 80px;
+}
+
+.broker-specificity__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.broker-specificity__container ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.broker-specificity__container li {
+    border: 1px solid #4A4AF3;
+    border-radius: 55px;
+    margin: 0 0 20px 0;
+    padding: 10px 15px;
+    margin-right: calc(15px + 15 * (100vw - 992px) / 928);
+}
+
+.broker-license__wrapper {
+    margin: 0 0 60px;
+}
+
+.broker-license__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.broker-license-items__body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    gap: 40px;
+}
+
+.broker-license-item {
+    margin: 0 0 10px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.broker-license-item__container p {
+    margin: 0 0 10px;
+    color: #9C9C9C;
+}
+
+.broker-license-item__container p:nth-child(2) {
+    color: #121212;
+}
+
+.license-cart p {
+    color: #4A4AF3;
+    cursor: pointer;
+}
+
+.license-cart p:hover {
+    color: #75c1ff;
+}
+
+.license-cart__img {
+    display: none;
+}
+
+.license-cart__img--active {
+    display: block;
+}
+
+.license-item__close {
+    z-index: 3;
+}
+
+.license-cart__img-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(41, 41, 41, 0.7);
+}
+
+.license-cart__img-container {
+    max-width: 460px;
+    padding: 35px 0 0;
+    margin: 0 10px 20px;
+}
+
+.license-cart__img-container .license-item__close {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+}
+
+.license-cart__img-container .license-item__close .icon-close {
+    margin-left: 92%;
+    cursor: pointer;
+}
+
+.license-cart__img-container .license-item__close .icon-close:after {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.broker-tel {
+    color: #121212;
+}
+
+.broker-tel:hover {
+    color: #121212;
+}
+
+.broker-pop-up {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.broker-pop-up__wrapper {
+    position: fixed;
+    bottom: -20%;
+    -webkit-transition: bottom 0.6s ease;
+    transition: bottom 0.6s ease;
+}
+
+.broker-pop-up--active {
+    bottom: 15px;
+}
+
+.broker-pop-up__item-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #9C9C9C;
+    border-radius: 55px;
+    background: white;
+}
+
+.broker-pop-up__item-container .button__wrapper--broker .button__container {
+    width: 140px;
+    height: 40px;
+}
+
+.broker-pop-up__item-container .button__wrapper--broker .button__container button {
+    font-size: 16px;
+}
+
+.broker-pop-up__name {
+    margin: 0 15px 0 0;
+}
+
+.broker-pop-up__name p {
+    font-size: 16px;
+    line-height: 130%;
+}
+
+@media (max-width: 1200px) {
+    .broker__title-container h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .broker-head__wrapper {
+        margin: 0 0 10px;
+    }
+
+    .broker__title-container h1 {
+        font-size: 38px;
+    }
+
+    .tariff-item {
+        -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+        row-gap: 20px;
+    }
+
+    .tariff-item__service {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+    }
+
+    .tariff-item__deposit {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+    }
+
+    .tariff-item__detalies {
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-row: 3;
+        grid-row-start: 3;
+    }
+
+    .broker-option__container {
+        -ms-grid-columns: minmax(auto, 1.4fr) minmax(auto, 1.4fr) minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1.4fr) minmax(auto, 1.4fr) minmax(auto, 1fr);
+    }
+
+    .broker-license-items__body {
+        -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+    }
+
+    .broker-pop-up__item-wrapper {
+        margin: 0 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .broker-head .container {
+        padding: 0 10px;
+    }
+
+    .broker__title-container h1 {
+        font-size: 32px;
+    }
+
+    .tariff .container {
+        padding: 0 10px;
+    }
+
+    .tariff-wrapper {
+        margin: 0 0 53px;
+    }
+
+    .tariff-wrapper .container {
+        padding: 0px;
+    }
+
+    .tariff-item {
+        -ms-grid-columns: minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr);
+        border-radius: 0 0 55px 55px;
+        padding: 30px 30px 30px 10px;
+    }
+
+    .tariff-item__commission {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+    }
+
+    .tariff-item__service {
+        -ms-grid-row: 3;
+        grid-row-start: 3;
+    }
+
+    .tariff-item__deposit {
+        -ms-grid-row: 4;
+        grid-row-start: 4;
+    }
+
+    .tariff-item__detalies {
+        -ms-grid-row: 5;
+        grid-row-start: 5;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+    }
+
+    .tariff-item-pop-up__wrapper {
+        background: white;
+    }
+
+    .tariff-item-pop-up__close {
+        background: none;
+    }
+
+    .tariff-item-pop-up__container::-webkit-scrollbar-track {
+        margin: 15px 0 15px 0;
+    }
+
+    .tariff-item-pop-up__container {
+        border-radius: 0px;
+        background: none;
+        max-width: 100%;
+    }
+
+    .tariff-item-pop-up__text {
+        margin: 0px 35px 20px;
+    }
+
+    .broker-issuer .container {
+        padding: 0 10px;
+    }
+
+    .broker-issuer__wrapper {
+        margin: 0 0 46px;
+    }
+
+    .broker-block {
+        scroll-margin: 100px;
+    }
+
+    .broker-option__wrapper {
+        margin: 0 0 26px;
+    }
+
+    .broker-option__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .broker-option__container {
+        -ms-grid-columns: minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr);
+        row-gap: 25px;
+    }
+
+    .broker-specificity__wrapper {
+        margin: 0 0 33px;
+    }
+
+    .broker-specificity__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .broker-license__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .broker-license-items__body {
+        -ms-grid-columns: minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr);
+        gap: 16px;
+    }
+
+    .broker-pop-up__wrapper .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .broker-head__wrapper {
+        margin: 0 0 5px;
+    }
+
+    .broker-image {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}

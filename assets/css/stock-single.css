@@ -1,0 +1,986 @@
+@charset "UTF-8";
+
+/*-----------------------------Переменные START-----------------------------*/
+
+/*-----------------------------Переменные END-----------------------------*/
+
+.stock {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.stock-head__wrapper {
+    margin: 0 0 15px;
+}
+
+.stock-head__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.stock-image__wrapper {
+    margin: 0 15px 0 0;
+}
+
+.stock-image__container {
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+.stock-image__container img {
+    width: 100%;
+    height: 100%;
+}
+
+.stock__title-wrapper .breadcrumbs__container ul {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.stock__title-container h1 {
+    font-size: 46px;
+    font-size: 52px;
+    line-height: 110%;
+}
+
+.anchor-nav--stock-single {
+    -webkit-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+}
+
+.anchor-nav--hidden {
+    top: 0px;
+    -webkit-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+}
+
+.stock-block {
+    scroll-margin: 170px;
+}
+
+.stock-price__wrapper {
+    margin-bottom: 40px;
+}
+
+.stock-price__container {
+    max-width: 480px;
+    height: 250px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: 1px solid #121212;
+    border-radius: 55px;
+    padding: 0 30px 0;
+}
+
+.stock-price__container p:nth-child(2) {
+    font-size: 70px;
+    line-height: 80%;
+    margin: 20px 0 10px;
+}
+
+.stock-price__container p:nth-child(2)::after {
+    content: " ₽";
+    font-size: 22px;
+    color: #9C9C9C;
+}
+
+.stock-review__wrapper {
+    margin: 0 0 100px;
+}
+
+.stock-review__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.stock-info {
+    max-width: 45%;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.stock-info__title h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 5px;
+}
+
+.stock-info__description {
+    height: 80px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 25px 0 0;
+}
+
+.stock-info__description p:first-child {
+    color: #9C9C9C;
+    line-height: 130%;
+}
+
+.stock-info__description p:nth-child(2) {
+    text-align: end;
+}
+
+.stock-income {
+    max-width: 45%;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.stock-income__title h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 5px;
+}
+
+.stock-income__period {
+    height: 80px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 25px 0 0;
+}
+
+.stock-income__period > p:first-child {
+    color: #9C9C9C;
+}
+
+.stock-income__num p {
+    text-align: end;
+}
+
+.stock-income__num p:first-child:after {
+    content: " %";
+    font-size: 14px;
+}
+
+.stock-income__num p:nth-child(2) {
+    font-size: 14px;
+    color: #9C9C9C;
+}
+
+.stock-income__num p:nth-child(2):after {
+    content: " ₽";
+    font-size: 14px;
+}
+
+.stock-indicators__wrapper {
+    margin: 0 0 90px;
+}
+
+.stock-indicators__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(150px, 780px) minmax(50px, 680px) minmax(50px, auto);
+    grid-template-columns: minmax(150px, 780px) minmax(50px, 680px) minmax(50px, auto);
+}
+
+.stock-indicators__container .stock-indicators-item:nth-of-type(1),
+.stock-indicators__container .stock-indicators-item:nth-of-type(2),
+.stock-indicators__container .stock-indicators-item:nth-of-type(3) {
+    margin: 0 0 90px;
+}
+
+.stock-indicators-item p {
+    line-height: 80%;
+}
+
+.stock-indicators-item p:first-child {
+    font-size: 80px;
+}
+
+.stock-indicators-item p:first-child::after {
+    font-size: 18px;
+    color: #9C9C9C;
+}
+
+.stock-indicators-item p:nth-child(2) {
+    display: inline;
+}
+
+.stock-indicators-item span {
+    vertical-align: middle;
+}
+
+.stock-indicators-item .icon-notification:after {
+    color: #4A4AF3;
+}
+
+.stock-indicators-item .icon-notification:hover + .stock-indicators-item__hint {
+    display: block;
+}
+
+.stock-indicators-item__capitalization p:first-child::after {
+    content: " млрд ₽";
+}
+
+.stock-indicators-item__trading-volume p:first-child::after {
+    content: " млрд ₽";
+}
+
+.stock-indicators-item__shares-circulation p:first-child::after {
+    content: " млн";
+}
+
+.stock-indicators-item__pe p:first-child::after,
+.stock-indicators-item__beta p:first-child::after {
+    content: "";
+}
+
+.stock-indicators-item__volatility p:first-child::after {
+    content: " %";
+}
+
+.stock-indicators-item__hint {
+    display: none;
+}
+
+.stock-indicators-item__hint-container {
+    max-width: 360px;
+    position: absolute;
+    background: white;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 20px 15px;
+    margin: 10px 0 0;
+    z-index: 1;
+}
+
+.stock-indicators-item__hint-container p:first-child {
+    color: #434343;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.stock-indicators-item__hint-container p:first-child::after {
+    content: "";
+}
+
+.stock-issuer__wrapper {
+    max-width: 1200px;
+    margin: 0 0 95px;
+}
+
+.stock-issuer-container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.stock-issuer-container p {
+    margin: 0 0 20px;
+}
+
+.stock-statements__wrapper {
+    margin: 0 0 128px;
+}
+
+.stock-statements__container {
+    height: 300px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.stock-statements-item__wrapper {
+    margin: 0 0 100px;
+}
+
+.stock-statements-item__container {
+    width: 335px;
+    height: 335px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.stock-statements-item__container p {
+    line-height: 80%;
+}
+
+.stock-statements-item__container p:first-child {
+    font-size: 70px;
+    margin: 0 0 20px;
+}
+
+.stock-statements-item__container p:nth-child(2) {
+    text-align: center;
+}
+
+.stock-statements-item__container p:nth-child(2):after {
+    content: " млрд ₽";
+    font-size: 18px;
+}
+
+.stocks-forecast__wrapper {
+    margin: 0 0 90px;
+}
+
+.often-question__titile h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 36px;
+}
+
+.stock-forecast-items p:first-child {
+    margin: 0 0 10px;
+}
+
+.stock-forecast-item__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 55px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border: 1px solid #d7d7d7;
+    border-radius: 100px;
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child p:nth-child(2) {
+    margin: 13px 10px 0 0;
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child p:nth-child(2):after {
+    content: " ₽";
+    font-size: 18px;
+    color: #9C9C9C;
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child p:nth-child(3) {
+    color: #9C9C9C;
+    margin: 0 5px 0 0;
+    display: inline-block;
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child p:nth-child(3)::before {
+    content: "+";
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child p:nth-child(3):after {
+    content: " %";
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child span:not(.icon-notification) {
+    color: #9C9C9C;
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child span:not(.icon-notification):after {
+    content: " ₽)";
+}
+
+.stock-forecast-item__container .stock-forecast-item:first-child span:not(.icon-notification)::before {
+    content: "(+";
+}
+
+.stock-forecast-item__container .stock-forecast-item:nth-child(2) span:not(.icon-notification):after {
+    content: " ₽";
+    font-size: 18px;
+    color: #9C9C9C;
+}
+
+.stock-forecast-item__container .stock-forecast-item:nth-child(2) span:nth-child(2) {
+    text-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.stock-forecast-item {
+    padding: 20px 0;
+}
+
+.stock-forecast-item p:first-child {
+    display: inline;
+}
+
+.stock-forecast-item p:nth-child(2) {
+    font-size: 42px;
+    line-height: 80%;
+    margin: 13px 0 0;
+}
+
+.stock-forecast-item .icon-notification {
+    vertical-align: middle;
+}
+
+.stock-forecast-item .icon-notification:after {
+    color: #4A4AF3;
+}
+
+.stock-forecast-item .icon-notification:hover + .stock-indicators-item__hint {
+    display: block;
+}
+
+.slider-popular,
+.slider-similar-sector {
+    margin: 0 0 93px;
+}
+
+.slider-popular .slider__title-container h2,
+.slider-similar-sector .slider__title-container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 24px;
+}
+
+.slider-rise-fall h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 24px;
+}
+
+.slider-rise-fall .rise-fall__wrapper {
+    margin: 0 0 87px;
+}
+
+.stock-linking {
+    width: 50%;
+}
+
+.stocks-linking__wrapper {
+    margin: 0 0 0 10px;
+}
+
+.stock-linking-item__nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 30px 30px 10px;
+}
+
+.stock-linking-item__nav p {
+    color: #9C9C9C;
+}
+
+.stocks-linking__container {
+    border: 1px solid #d7d7d7;
+    border-radius: 55px;
+}
+
+.stocks-linking__container div:last-child .stock-linking-item__wrapper {
+    padding: 15px 30px 30px;
+}
+
+.stocks-linking__title h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 36px;
+}
+
+.stock-linking-item__wrapper {
+    padding: 15px 30px;
+}
+
+.stock-linking-item__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.stock-linking-item__container:hover .stock-linking-image__container img {
+    opacity: 1;
+}
+
+.stock-linking-item__container:hover .stock-linking-name__container p {
+    color: #434343;
+}
+
+.stock-linking-image {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.stock-linking-image__wrapper {
+    margin: 0 10px 0 0;
+}
+
+.stock-linking-image__container {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.stock-linking-image__container img {
+    opacity: 0.7;
+}
+
+.stock-linking-name__container {
+    margin: 0 15px 0 0;
+}
+
+.stock-linking-name__container p {
+    font-size: 26px;
+    line-height: 110%;
+}
+
+.stock-linking__wapper {
+    text-align: end;
+}
+
+.stock-linking__container span {
+    text-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.stock-linking__container span:after {
+    content: " %";
+}
+
+.often-question--stock-single .often-question__titile h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 36px;
+}
+
+.often-question--stock-single .often-question__wrapper {
+    margin: 0 10px 0 0;
+}
+
+.stock-pop-up {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.stock-pop-up__wrapper {
+    position: fixed;
+    bottom: -20%;
+    -webkit-transition: bottom 0.6s ease;
+    transition: bottom 0.6s ease;
+}
+
+.stock-pop-up--active {
+    bottom: 15px;
+}
+
+.stock-pop-up__item-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #9C9C9C;
+    border-radius: 55px;
+    background: white;
+}
+
+.stock-pop-up__item-container .button__wrapper--stock .button__container {
+    width: 100px;
+    height: 40px;
+}
+
+.stock-pop-up__item-container .button__wrapper--stock .button__container button {
+    font-size: 16px;
+}
+
+.stock-pop-up__name {
+    margin: 0 15px 0 0;
+}
+
+.stock-pop-up__name p {
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.stock-pop-up__name p:nth-child(2)::after {
+    content: " ₽";
+    font-size: 14px;
+    color: #9C9C9C;
+}
+
+@media (max-width: 1440px) {
+    .stock-linking-name__container p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .stock__title-container h1 {
+        font-size: 42px;
+    }
+
+    .anchor-nav--hidden {
+        top: 0;
+    }
+
+    .stock-indicators__container {
+        -ms-grid-columns: minmax(150px, 780px) minmax(50px, auto);
+        grid-template-columns: minmax(150px, 780px) minmax(50px, auto);
+    }
+
+    .stock-statements__wrapper {
+        background: #F5F5F5;
+        border-radius: 0 0 55px 55px;
+    }
+
+    .stock-statements__container {
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .stock-statements-item__wrapper {
+        margin: 0;
+    }
+
+    .stock-statements-item__container {
+        width: auto;
+        height: auto;
+        background: transparent;
+    }
+}
+
+@media (max-width: 992px) {
+    .stock-head__wrapper {
+        margin: 0 0 10px;
+    }
+
+    .stock__title-container h1 {
+        font-size: 38px;
+    }
+
+    .anchor-nav--hidden {
+        top: 0px;
+    }
+
+    .stock-review__wrapper {
+        margin: 0 0 65px;
+    }
+
+    .stock-indicators__wrapper {
+        margin: 0 0 53px;
+    }
+
+    .stock-indicators__container .stock-indicators-item:nth-of-type(1),
+  .stock-indicators__container .stock-indicators-item:nth-of-type(2),
+  .stock-indicators__container .stock-indicators-item:nth-of-type(3),
+  .stock-indicators__container .stock-indicators-item:nth-of-type(4) {
+        margin: 0 0 56px;
+    }
+
+    .stock-issuer__wrapper {
+        margin: 0 0 60px;
+    }
+
+    .stock-statements__wrapper {
+        margin: 0 0 62px;
+    }
+
+    .stock-statements__container {
+        padding: 50px 0;
+        height: 500px;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .stocks-forecast__wrapper {
+        margin: 0 0 62px;
+    }
+
+    .stock-forecast-item__container .stock-forecast-item:first-child span:not(.icon-notification) {
+        font-size: 16px;
+    }
+
+    .stock-forecast-item p:nth-child(2) {
+        font-size: 28px;
+    }
+
+    .slider-popular,
+  .slider-similar-sector {
+        margin: 0 0 62px;
+    }
+
+    .slider-rise-fall .rise-fall__wrapper {
+        margin: 0 0 68px;
+    }
+
+    .stock-linking {
+        width: 100%;
+    }
+
+    .stocks-linking__wrapper {
+        margin: 0;
+    }
+
+    .stock-linking-name__container p {
+        font-size: 16px;
+    }
+
+    .often-question--stock-single .often-question__wrapper {
+        margin: 0 0 70px 0;
+    }
+
+    .stock-pop-up__item-wrapper {
+        margin: 0 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stock-head .container {
+        padding: 0 10px;
+    }
+
+    .stock__title-container h1 {
+        font-size: 32px;
+    }
+
+    .anchor-nav--hidden {
+        top: 0;
+    }
+
+    .stock-block {
+        scroll-margin: 100px;
+    }
+
+    .stock-price .container {
+        padding: 0 10px;
+    }
+
+    .stock-price .button__wrapper--stock .button__container {
+        max-width: 100%;
+    }
+
+    .stock-price__container p:nth-child(2) {
+        font-size: 60px;
+    }
+
+    .stock-price__container {
+        max-width: 100%;
+    }
+
+    .stock-review .container {
+        padding: 0 10px;
+    }
+
+    .stock-review__container {
+        display: block;
+    }
+
+    .stock-info {
+        max-width: 100%;
+        margin: 0 0 62px;
+    }
+
+    .stock-income {
+        max-width: 100%;
+    }
+
+    .stock-indicators .container {
+        padding: 0 10px;
+    }
+
+    .stock-indicators .container {
+        padding: 50px 10px;
+    }
+
+    .stock-indicators__wrapper {
+        background: #F5F5F5;
+        border-radius: 0 0 55px 55px;
+    }
+
+    .stock-indicators__container {
+        -ms-grid-columns: minmax(150px, auto);
+        grid-template-columns: minmax(150px, auto);
+    }
+
+    .stock-indicators__container .stock-indicators-item:nth-of-type(5) {
+        margin: 0 0 56px;
+    }
+
+    .stock-indicators-item p:first-child {
+        font-size: 60px;
+    }
+
+    .stock-indicators-item__hint-container p:first-child {
+        color: #434343;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .stock-indicators-item__hint-container p:first-child::after {
+        content: "";
+    }
+
+    .stock-issuer .container {
+        padding: 0 10px;
+    }
+
+    .stock-statements .container {
+        padding: 50px 10px;
+    }
+
+    .stock-statements__container {
+        -webkit-align-items: start;
+        -ms-flex-align: start;
+        align-items: start;
+        height: 480px;
+    }
+
+    .stock-statements-item__container p:first-child {
+        font-size: 60px;
+        margin: 0 0 5px;
+    }
+
+    .stock-statements-item__container p:first-child::after {
+        content: " млрд ₽";
+        font-size: 18px;
+        color: #9C9C9C;
+    }
+
+    .stock-statements-item__container p:nth-child(2):after {
+        content: "";
+    }
+
+    .stock-statements-item__container p:nth-child(2) {
+        text-align: start;
+    }
+
+    .stock-statements-item__container {
+        width: auto;
+        height: auto;
+        background: #F5F5F5;
+    }
+
+    .stocks-forecast__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .stock-forecast-item__container .stock-forecast-item:first-child span:not(.icon-notification) {
+        font-size: 16px;
+    }
+
+    .stock-forecast-item__container .stock-forecast-item:nth-child(2) p {
+        margin: 13px 10px 0 0;
+    }
+
+    .stock-forecast-item__container {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border-top: 1px solid #d7d7d7;
+        border-bottom: 1px solid #d7d7d7;
+        border-left: 0px;
+        border-right: 0px;
+        border-radius: 0px;
+    }
+
+    .stock-forecast-item {
+        margin: 0 0 14px;
+    }
+
+    .stock-forecast-item p:nth-child(2) {
+        font-size: 60px;
+    }
+
+    .slider-popular .slider__title-container,
+  .slider-similar-sector .slider__title-container {
+        margin: 0 10px;
+    }
+
+    .slider-rise-fall .rice__wrapper {
+        margin: 0 0 62px;
+    }
+
+    .slider-rise-fall .rise-fall__title-container {
+        margin: 0 10px;
+    }
+
+    .stock-linking__container span {
+        font-size: 14px;
+    }
+
+    .stock-pop-up__wrapper .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .stock-head__wrapper {
+        margin: 0 0 5px;
+    }
+
+    .stock-image {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .stock-price__wrapper {
+        margin-bottom: 60px;
+    }
+
+    .stock-price__container p:nth-child(2) {
+        font-size: 55px;
+    }
+
+    .stock-price__container {
+        border: none;
+        padding: 0;
+        height: auto;
+    }
+
+    .stock-linking-name__container p {
+        font-size: 14px;
+    }
+}

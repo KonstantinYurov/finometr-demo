@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/*-----------------------------Переменные START-----------------------------*/
+
+/*-----------------------------Переменные END-----------------------------*/
+
+.roboadvisors {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.stocks-table-standart__robo-service p:nth-child(1)::after {
+    content: " %";
+    font-size: 14px;
+}
+
+.stocks-table-standart__robo-fee p:nth-child(1)::after {
+    content: " %";
+    font-size: 14px;
+}
+
+.stocks-table-standart__robo-deposit p:nth-child(1)::after {
+    content: " ₽";
+    font-size: 14px;
+}
+
+.stocks-filter-pop-up__wrapper--roboadvisor {
+    position: fixed;
+    bottom: 20px;
+    -webkit-transition: bottom 0.6s ease;
+    transition: bottom 0.6s ease;
+}
+
+.stocks-pop-up--hideo-boadvisor {
+    bottom: -20%;
+}
+
+@media (max-width: 768px) {
+    .roboadvisors__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .roboadvisors__container td:last-child {
+        padding-right: 0px;
+    }
+
+    .roboadvisors__container .stocks-table-standart__robo-fee {
+        display: none;
+    }
+
+    .roboadvisors__container .stocks-table-standart__robo-deposit {
+        display: none;
+    }
+
+    .roboadvisors__container .stocks-table-standart--show {
+        display: table-cell;
+    }
+
+    .stocks-filter-pop-up__wrapper--roboadvisor .container {
+        padding: 0 10px;
+    }
+}

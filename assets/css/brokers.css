@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/*-----------------------------Переменные START-----------------------------*/
+
+/*-----------------------------Переменные END-----------------------------*/
+
+.brokers {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.brokers-table tbody td:nth-child(2)::after {
+    content: "";
+}
+
+.brokers-table tbody td:last-child {
+    padding-right: 5px;
+}
+
+.stocks-table-standart__fee p:nth-child(1)::after {
+    content: " %";
+    font-size: 14px;
+}
+
+.stocks-table-standart__num-clients p:nth-child(1)::after {
+    content: " млн";
+    font-size: 14px;
+}
+
+.stocks-table-standart__service p:nth-child(1)::after {
+    content: " ₽";
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .brokers__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .brokers-table thead .brokers-table__service {
+        display: none;
+    }
+
+    .brokers-table thead .brokers-table__customs {
+        display: none;
+    }
+
+    .brokers-table thead .stocks-table-standart--show {
+        display: table-cell;
+    }
+
+    .brokers-table tbody td:last-child {
+        padding-right: 0px;
+    }
+
+    .brokers-table tbody .stocks-table-standart__service {
+        display: none;
+    }
+
+    .brokers-table tbody .stocks-table-standart__num-clients {
+        display: none;
+    }
+
+    .brokers-table tbody .stocks-table-standart--show {
+        display: table-cell;
+    }
+}
+
+@media (max-width: 390px) {
+    .brokers-table thead th:first-child {
+        width: calc(58px + 47 * (100vw - 320px) / 70);
+    }
+}

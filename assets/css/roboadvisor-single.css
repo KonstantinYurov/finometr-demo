@@ -1,0 +1,413 @@
+@charset "UTF-8";
+
+/*-----------------------------Переменные START-----------------------------*/
+
+/*-----------------------------Переменные END-----------------------------*/
+
+.roboadvisor {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.roboadvisor-head__wrapper {
+    margin: 0 0 15px;
+}
+
+.roboadvisor-head__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.roboadvisor-image__wrapper {
+    margin: 0 15px 0 0;
+}
+
+.roboadvisor-image__container {
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+.roboadvisor-image__container img {
+    width: 100%;
+    height: 100%;
+}
+
+.roboadvisor__title-wrapper .breadcrumbs__container ul {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.roboadvisor__title-container h1 {
+    font-size: 46px;
+    font-size: 52px;
+    line-height: 110%;
+}
+
+.roboadvisor-issuer__wrapper {
+    max-width: 1200px;
+    margin: 0 0 95px;
+}
+
+.roboadvisor-issuer-container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.roboadvisor-issuer-container p {
+    margin: 0 0 20px;
+}
+
+.roboadvisor-block {
+    scroll-margin: 170px;
+}
+
+.roboadvisor-option__wrapper {
+    margin: 0 0 70px;
+}
+
+.roboadvisor-option__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+}
+
+.roboadvisor-option__container li.list-done {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 0 20px;
+}
+
+.roboadvisor-option__container li.list-done::before {
+    content: "+ ";
+    position: absolute;
+    left: -2px;
+    top: 2px;
+    font-size: 25px;
+    color: #4A4AF3;
+}
+
+.roboadvisor-option__container li.list-close {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 0 20px;
+}
+
+.roboadvisor-option__container li.list-close::before {
+    content: "‒ ";
+    position: absolute;
+    left: -2px;
+    top: 0px;
+    font-size: 25px;
+    color: #d7d7d7;
+}
+
+.roboadvisor-tools__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.roboadvisor-products__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.roboadvisor-terminal__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.roboadvisor-specificity__wrapper {
+    margin: 0 0 80px;
+}
+
+.roboadvisor-specificity__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.roboadvisor-specificity__container ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.roboadvisor-specificity__container li {
+    border: 1px solid #4A4AF3;
+    border-radius: 55px;
+    margin: 0 0 20px 0;
+    padding: 10px 15px;
+    margin-right: calc(15px + 15 * (100vw - 992px) / 928);
+}
+
+.roboadvisor-license__wrapper {
+    margin: 0 0 60px;
+}
+
+.roboadvisor-license__container h2 {
+    font-size: 30px;
+    line-height: 110%;
+    margin: 0 0 28px;
+}
+
+.roboadvisor-license-items__body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+    gap: 40px;
+}
+
+.roboadvisor-license-item {
+    margin: 0 0 10px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.roboadvisor-license-item__container p {
+    margin: 0 0 10px;
+    color: #9C9C9C;
+}
+
+.roboadvisor-license-item__container p:nth-child(2) {
+    color: #121212;
+}
+
+.license-cart p {
+    color: #4A4AF3;
+    cursor: pointer;
+}
+
+.license-cart p:hover {
+    color: #75c1ff;
+}
+
+.license-cart__img {
+    display: none;
+}
+
+.license-cart__img--active {
+    display: block;
+}
+
+.roboadvisor-license-item__close {
+    z-index: 3;
+}
+
+.license-cart__img-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(41, 41, 41, 0.7);
+}
+
+.license-cart__img-container {
+    max-width: 460px;
+    padding: 35px 0 0;
+    margin: 0 10px 20px;
+}
+
+.license-cart__img-container .roboadvisor-license-item__close {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+}
+
+.license-cart__img-container .roboadvisor-license-item__close .icon-close {
+    margin-left: 92%;
+    cursor: pointer;
+}
+
+.license-cart__img-container .roboadvisor-license-item__close .icon-close:after {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.roboadvisor-tel {
+    color: #121212;
+}
+
+.roboadvisor-tel:hover {
+    color: #121212;
+}
+
+.roboadvisor-pop-up {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.roboadvisor-pop-up__wrapper {
+    position: fixed;
+    bottom: -20%;
+    -webkit-transition: bottom 0.6s ease;
+    transition: bottom 0.6s ease;
+}
+
+.roboadvisor-pop-up--active {
+    bottom: 15px;
+}
+
+.roboadvisor-pop-up__item-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #9C9C9C;
+    border-radius: 55px;
+    background: white;
+}
+
+.roboadvisor-pop-up__item-container .button__wrapper--roboadvisor .button__container {
+    width: 140px;
+    height: 40px;
+}
+
+.roboadvisor-pop-up__item-container .button__wrapper--roboadvisor .button__container button {
+    font-size: 16px;
+}
+
+.roboadvisor-pop-up__name {
+    margin: 0 15px 0 0;
+}
+
+.roboadvisor-pop-up__name p {
+    font-size: 16px;
+    line-height: 130%;
+}
+
+@media (max-width: 1200px) {
+    .roboadvisor__title-container h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .roboadvisor-head__wrapper {
+        margin: 0 0 10px;
+    }
+
+    .roboadvisor__title-container h1 {
+        font-size: 38px;
+    }
+
+    .roboadvisor-option__container {
+        -ms-grid-columns: minmax(auto, 1.4fr) minmax(auto, 1.4fr) minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1.4fr) minmax(auto, 1.4fr) minmax(auto, 1fr);
+    }
+
+    .roboadvisor-license-items__body {
+        -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+    }
+
+    .roboadvisor-pop-up__item-wrapper {
+        margin: 0 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .roboadvisor-head .container {
+        padding: 0 10px;
+    }
+
+    .roboadvisor__title-container h1 {
+        font-size: 32px;
+    }
+
+    .roboadvisor-issuer .container {
+        padding: 0 10px;
+    }
+
+    .roboadvisor-issuer__wrapper {
+        margin: 0 0 46px;
+    }
+
+    .roboadvisor-block {
+        scroll-margin: 100px;
+    }
+
+    .roboadvisor-option__wrapper {
+        margin: 0 0 26px;
+    }
+
+    .roboadvisor-option__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .roboadvisor-option__container {
+        -ms-grid-columns: minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr);
+        row-gap: 25px;
+    }
+
+    .roboadvisor-specificity__wrapper {
+        margin: 0 0 33px;
+    }
+
+    .roboadvisor-specificity__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .roboadvisor-license__wrapper .container {
+        padding: 0 10px;
+    }
+
+    .roboadvisor-license-items__body {
+        -ms-grid-columns: minmax(auto, 1fr);
+        grid-template-columns: minmax(auto, 1fr);
+        gap: 16px;
+    }
+
+    .roboadvisor-pop-up__wrapper .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .roboadvisor-head__wrapper {
+        margin: 0 0 5px;
+    }
+
+    .roboadvisor-image {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}

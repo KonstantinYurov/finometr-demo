@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/*-----------------------------Переменные START-----------------------------*/
+
+/*-----------------------------Переменные END-----------------------------*/
+
+.page-not-found {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.page-not-found__container h1 {
+    text-align: center;
+    font-size: 232px;
+    line-height: 110%;
+}
+
+.page-not-found-404 {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 0 20px;
+}
+
+.page-not-found-404__container p {
+    text-align: center;
+    color: #9C9C9C;
+    margin: 0 0 27px;
+}
+
+.page-not-found-404__img {
+    margin: 0px auto;
+    max-width: 250px;
+}
+
+.page-not-found-404__img-container {
+    max-height: 160px;
+}
+
+.page-not-found-nav__wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 0 60px;
+}
+
+.page-not-found-nav__container {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    max-width: 1200px;
+}
+
+.page-not-found-nav__container p {
+    text-align: center;
+    margin: 0 0 27px;
+}
+
+.page-not-found-nav__container ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.page-not-found-nav__container li {
+    font-size: 52px;
+    line-height: 110%;
+    margin: 0 15px;
+}
+
+@media (max-width: 1200px) {
+    .page-not-found__container h1 {
+        font-size: 142px;
+    }
+
+    .page-not-found-nav__container li {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-not-found__container h1 {
+        font-size: 138px;
+    }
+
+    .page-not-found-nav__container li {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-not-found__container h1 {
+        font-size: 128px;
+    }
+
+    .page-not-found-nav__container ul {
+        display: block;
+        text-align: center;
+    }
+
+    .page-not-found-nav__container li {
+        font-size: 28px;
+        margin: 0;
+    }
+}
